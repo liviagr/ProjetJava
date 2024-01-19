@@ -20,9 +20,7 @@ public class GestionTache {
         List<Tache> listeTache = projet.getListeTache();
         for (Tache tache : listeTache) {
             if (tache.getTitre().equals(titre)) {
-//                int indexOfTache = listeTache.indexOf(tache);
                 tache.setEtat(true);
-//                listeTache.set(indexOfTache, tache);
             }
         }
     }
