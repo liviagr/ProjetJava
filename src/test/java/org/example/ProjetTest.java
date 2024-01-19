@@ -36,6 +36,7 @@ public class ProjetTest {
         gestionTache.ajouterTache("titre1", "description1", 3);
         gestionTache.ajouterTache("titre2", "description2", 4);
 
+//        récupère durée totale
         int dureeTotale = projet.calculerDureeTotale();
 
         Assertions.assertEquals(7, dureeTotale);
@@ -48,6 +49,7 @@ public class ProjetTest {
 
         int dureeTotale = projet.calculerDureeTotale();
 
+//        Liste vide donc la somme de la durée doit valoir 0
         Assertions.assertEquals(0, dureeTotale);
     }
 
@@ -61,7 +63,7 @@ public class ProjetTest {
         gestionTache.ajouterTache("titre2", "description2", -4);
 
         int dureeTotale = projet.calculerDureeTotale();
-
+//        Les durées négatives ne sont pas ajoutées : donc somme vaut 0
         Assertions.assertEquals(0, dureeTotale);
 
     }
