@@ -6,7 +6,7 @@ import java.util.List;
 public class Projet {
 
     protected String nom;
-    protected List<Tache> tache = new ArrayList<Tache>();
+    protected List<Tache> tache = new ArrayList<>();
 
     public Projet(String nom) {
         this.nom = nom;
