@@ -17,18 +17,21 @@ public class GestionTache {
     }
 
     public void completerTache(String titre) {
-        List<Tache> listeTache = projet.getTache();
+        List<Tache> listeTache = projet.getListeTache();
         for (Tache tache : listeTache) {
             if (tache.getTitre().equals(titre)) {
-                int indexOfTache = listeTache.indexOf(tache);
+//                int indexOfTache = listeTache.indexOf(tache);
                 tache.setEtat(true);
-                listeTache.set(indexOfTache, tache);
+//                listeTache.set(indexOfTache, tache);
             }
         }
     }
 
+//    Vérifie si une tache est complétée
+//    Return l'état de la tâche si elle est trouvée
+//    Return false si la tâche n'est pas trouvée
     public boolean verifierTache(String titre){
-        List<Tache> listeTache = projet.getTache();
+        List<Tache> listeTache = projet.getListeTache();
         for (Tache tache : listeTache) {
             if (tache.getTitre().equals(titre)) {
                 return tache.getEtat();

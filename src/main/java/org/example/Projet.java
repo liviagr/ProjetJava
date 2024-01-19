@@ -6,18 +6,32 @@ import java.util.List;
 public class Projet {
 
     protected String nom;
-    protected List<Tache> tache = new ArrayList<>();
+    protected List<Tache> listeTache = new ArrayList<>();
 
     public Projet(String nom) {
         this.nom = nom;
     }
 
-    public List<Tache> getTache() {
-        return tache;
+    public List<Tache> getListeTache() {
+        return listeTache;
     }
 
     public void ajouterTache(Tache new_tache){
-        tache.add(new_tache);
+        listeTache.add(new_tache);
+    }
+
+    public int calculerDureeTotale(){
+        int dureeTotale = 0;
+        for (Tache tache : listeTache){
+            int duree = tache.getDuree();
+            if(duree>=0){
+                dureeTotale += duree;
+
+            }
+
+        }
+
+        return dureeTotale;
     }
 
 

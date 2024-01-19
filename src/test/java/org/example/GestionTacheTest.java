@@ -14,7 +14,7 @@ public class GestionTacheTest {
         GestionTache gestionTache = new GestionTache(projet);
         gestionTache.ajouterTache("titre1", "description1", 5);
 
-        Tache tacheTest = projet.getTache().get(0);
+        Tache tacheTest = projet.getListeTache().get(0);
 
         Tache expected = new Tache("titre1", "description1", 5);
 
@@ -32,7 +32,7 @@ public class GestionTacheTest {
         gestionTache.ajouterTache("titre1", "description1", 5);
 
         gestionTache.completerTache("titre1");
-        Tache tache = projet.getTache().get(0);
+        Tache tache = projet.getListeTache().get(0);
 
         Assertions.assertTrue(tache.getEtat());
 
@@ -46,7 +46,7 @@ public class GestionTacheTest {
         gestionTache.ajouterTache("titre1", "description1", 5);
 
         gestionTache.completerTache("titr1");
-        Tache tache = projet.getTache().get(0);
+        Tache tache = projet.getListeTache().get(0);
 
         Assertions.assertFalse(tache.getEtat());
 
